@@ -5,10 +5,12 @@ import com.dcode.spring.error.handler.FallbackExceptionHandler;
 import com.dcode.spring.error.utils.ServletExceptionParser;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.List;
 
 @AutoConfiguration
+@ComponentScan(basePackages = {"com.dcode.spring.error.handler, com.dcode.spring.error.utils"})
 public class ExceptionSpringAutoConfig {
 
     @Bean
