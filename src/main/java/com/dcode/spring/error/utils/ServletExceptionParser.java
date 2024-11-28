@@ -27,9 +27,11 @@ public class ServletExceptionParser implements ExceptionParserFacade {
         for (ApiExceptionHandler handler : handlers) {
             if (handler.handles(exception)) {
                 problemDetail = handler.getHandler().apply(exception);
-            } else {
-                fallbackExceptionHandler.getHandler().apply(exception);
+                break;
             }
+        }
+        if (problemDetail == null) {
+            problemDetail = fallbackExceptionHandler.getHandler().apply(exception);
         }
         return problemDetail;
     }
