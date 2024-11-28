@@ -6,4 +6,6 @@ public class Constants {
     }
 
     public static final String ATTRIBUTE_MESSAGE = "message";
+
+    public static final String HTTP_STATUS_500 = "500";
 }

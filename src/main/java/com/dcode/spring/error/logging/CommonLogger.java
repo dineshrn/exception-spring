@@ -10,8 +10,8 @@ public class CommonLogger {
     private CommonLogger() {
     }
 
-    public static void info() {
-        logger.info("");
+    public static void info(String message) {
+        logger.info(message);
     }
 
     public static void error(String message) {
